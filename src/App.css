@@ -1,14 +1,12 @@
 .App {
   text-align: center;
-  padding: 15px;
+  padding: 15em;
+  margin:0;
   font-weight: 300;
-  background-color: #00bfff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin);
-    color: #282c34; */
 }
 
 a,
@@ -30,13 +28,16 @@ ul {
   list-style-type: none;
 }
 
-html {
+body, html {
   text-align: center;
   color: #fff;
   font-family: "Raleway", "Arial", "sans-serif";
   font-weight: 400;
   font-size: 20;
   text-rendering: optimizeLegibility;
+  min-height: 100%;
+  background: cover;
+  background-color:  #00bfff;
 }
 
 h1 {
