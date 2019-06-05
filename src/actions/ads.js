@@ -12,7 +12,7 @@ const adsFetched = ads => ({
   ads
 });
 
-export const loadAds = () => (dispatch, getState) => {
+export const loadAds = () => (dispatch) => {
 
   request(`${baseUrl}/ads`)
     .then(response => {
