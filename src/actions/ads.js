@@ -1,21 +1,18 @@
 import request from "superagent";
+import {baseUrl} from '../constants'
 
 export const ADS_FETCHED = "ADS_FETCHED";
 // export const AD_CREATE_SUCCESS = "AD_CREATE_SUCCESS";
-export const AD_FETCHED = "AD_FETCHED";
 // export const AD_DELETE_SUCCESS = "AD_DELETE_SUCCESS";
+export const AD_FETCHED = "AD_FETCHED";
 export const AD_UPDATE_SUCCESS = "AD_UPDATE_SUCCESS";
-
-const baseUrl = "https://still-beyond-89734.herokuapp.com";
 
 const adsFetched = ads => ({
   type: ADS_FETCHED,
   ads
 });
 
-export const loadAds = () => (dispatch, getState) => {
-  console.log("test");
-  // if (getState().ads) return;
+export const loadAds = () => (dispatch) => {
 
   request(`${baseUrl}/ads`)
     .then(response => {
@@ -51,7 +48,7 @@ export const updateAd = (id, formValues) => dispatch => {
 
   request
     .put(`${baseUrl}/ads/${id}`)
-    .send(newAd) //to send the data to the DB
+    .send(newAd) 
     .then(() => {
       dispatch(adUpdateSuccess(newAd));
     })

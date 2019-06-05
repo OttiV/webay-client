@@ -19,7 +19,6 @@ export default class AdsList extends Component {
 
     return (
       <div className="AdsList">
-        <h1 className="WeBay">WeBay</h1>
 
         {!ads && "Loading..."}
 
