@@ -10,11 +10,11 @@ export default function AdDetails(props) {
       {props.ad && !props.editMode && (
         <div className="AdDetails">
           <h1>{props.ad.title} </h1>
-          <p>{props.ad.description} </p>
-          <p>$ {props.ad.price} </p>
-          <p>{props.ad.email} </p>
-          <p>{props.ad.phone} </p>
-          <img className="images" src={props.ad.picture} alt={props.ad.description} />
+          <img className="AdImages" src={props.ad.picture} alt={props.ad.description} />
+          <p>Description: {props.ad.description} </p>
+          <p>Price: $ {props.ad.price} </p>
+          <p>Email: {props.ad.email} </p>
+          <p>Phone: {props.ad.phone} </p>
           <br/>
           <button className="AdDetailsButtons" onClick={props.onEdit}>
             Edit

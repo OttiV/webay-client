@@ -66,7 +66,7 @@ export default class AdForm extends React.Component {
           className={"AdForm_submitButton"}
           onSubmit={this.props.onSubmit}
         >
-          Add
+          Edit
         </button>
       </form>
     );

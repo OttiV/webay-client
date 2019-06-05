@@ -7,6 +7,15 @@
   align-items: center;
   justify-content: center;
 }
+.AdImages {
+  border-radius: 2rem;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  margin: 0.5rem;
+  border: double #fff 0.5rem;
+  transition: transform .2s;
+}
 
 
 .AdDetailsButtons,
