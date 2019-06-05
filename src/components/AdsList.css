@@ -1,16 +1,18 @@
 .AdsList {
   text-align: center;
   padding: 15px;
+  margin: 0;
   font-weight: 300;
-  background-color:  #00bfff;
   display: flex;
+  background: cover;
   flex-direction: column;
+  min-height: 100%;
 }
 .Ads {
   border: solid #fff 0.2rem;
   width: 350px;
   height: 350px;
-  padding: 1rem;
+  padding: 0.1rem;
   margin: 0.4rem;
   float: left;
   border-radius: 2rem;
@@ -22,8 +24,8 @@
 .images {
   border-radius: 2rem;
   object-fit: cover;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 2rem;
   border: double #fff 0.5rem;
   transition: transform .2s;
