@@ -5,6 +5,7 @@ import "./NavigationBar.css"
 
 class NavigationBar extends Component {
   render() {
+    console.log('CURRENT USER', this.props)
     return (
       <header className="navBar">
         <nav className="navbar navBar_navigation">
@@ -21,21 +22,21 @@ class NavigationBar extends Component {
               Home
             </NavLink>
               </li>
-              {/* {!this.props.currentUser && (
+              {!this.props.currentUser && (
                 <li>
                   <NavLink to="/login">Login</NavLink>{" "}
                 </li>
-              )} */}
+              )}
               {!this.props.currentUser && (
                 <li>
                   <NavLink to="/signup">Signup</NavLink>{" "}
                 </li>
               )}
-              {/* {this.props.currentUser && (
+              {this.props.currentUser && (
                 <li>
                   <NavLink to="/logout">Logout</NavLink>{" "}
                 </li>
-              )} */}
+              )}
             </ul>
           </div>
         </nav>
