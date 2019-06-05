@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import AdDetails from "./AdDetails";
-import { loadAd, updateAd } from "../actions/ads";
+import { loadAd, updateAd } from "../../actions/ads";
 
 class AdDetailsContainer extends React.Component {
   componentDidMount() {

@@ -1,8 +1,7 @@
 import React from "react";
-import { loadAds } from "../actions/ads";
+import { loadAds } from "../../actions/ads";
 import { connect } from "react-redux";
 import AdsList from "./AdsList";
-// import CreateEventFormContainer from "./CreateEventFormContainer";
 
 class AdsListContainer extends React.Component {
   componentDidMount() {
