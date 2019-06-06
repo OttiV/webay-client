@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./AdDetails.css";
 
 export default function AdDetails(props) {
-  console.log("PROPSSSS", props.ad);
   return (
     <div className="AdDetailsContainer">
       {props.ad && !props.editMode && (

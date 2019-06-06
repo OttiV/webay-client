@@ -35,7 +35,6 @@ export const loadAd = id => dispatch => {
   request
     .get(`${baseUrl}/ads/${id}`)
     .then(response => {
-      console.log(response.body);
       dispatch(adFetched(response.body));
     })
     .catch(console.error);
@@ -46,7 +45,6 @@ export const adUpdateSuccess = ad => ({
 });
 
 export const updateAd = (id, formValues) => dispatch => {
-  console.log(id, formValues);
   const newAd = formValues;
   newAd.id = id;
 
