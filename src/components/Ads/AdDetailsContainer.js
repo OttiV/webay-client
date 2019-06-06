@@ -12,7 +12,7 @@ class AdDetailsContainer extends React.Component {
   //     this.props.deleteAd(this.props.ad.id);
   //     this.props.history.push("/");
   //   };
-  state = { editMode: false };
+  state = { editMode: false, adDetails: true };
 
   onEdit = () => {
     //console.log("Check the state onClickhere:", this.state);
@@ -54,6 +54,7 @@ class AdDetailsContainer extends React.Component {
     return (
       <div>
         <AdDetails
+          adDetails={this.state.adDetails}
           onDelete={this.onDelete}
           onEdit={this.onEdit}
           editMode={this.state.editMode}

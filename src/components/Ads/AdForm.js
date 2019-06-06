@@ -61,13 +61,15 @@ export default class AdForm extends React.Component {
           className={"AdForm_input"}
         />
         <br />
-        <button
-          type="submit"
-          className={"AdForm_submitButton"}
-          onSubmit={this.props.onSubmit}
-        >
-          Edit
-        </button>
+        {this.props.adsList ? (
+          <button type="submit" className={"AdForm_submitButton"} onSubmit={this.props.onSubmit}>
+            Add
+          </button>
+        ) : (
+          <button type="submit" className={"AdForm_submitButton"} onSubmit={this.props.onSubmit}>
+            Edit
+          </button>
+        )}
       </form>
     );
   }

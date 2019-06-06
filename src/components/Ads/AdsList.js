@@ -7,7 +7,8 @@ export default class AdsList extends Component {
     return (
       <li className="Ads" key={ad.id}>
         <Link to={`/ads/${encodeURIComponent(ad.id)}`}>
-          {ad.title}<br></br> <i>$ {ad.price}</i> <br />
+          {ad.title}
+          <br /> <i>$ {ad.price}</i> <br />
           <img className="images" src={ad.picture} alt={ad.description} />
         </Link>
       </li>
@@ -16,13 +17,12 @@ export default class AdsList extends Component {
 
   render() {
     const { ads } = this.props;
-
+    console.log("ads", ads);
     return (
       <div className="AdsList">
-
         {!ads && "Loading..."}
 
-        {ads && <ul>{ads.map(this.renderAd)}</ul>}
+        {ads && <ul>{ads.map(ad => this.renderAd(ad))}</ul>}
       </div>
     );
   }
