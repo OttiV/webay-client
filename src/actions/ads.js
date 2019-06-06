@@ -21,7 +21,6 @@ const addAd = ad => ({
 export const loadAds = () => dispatch => {
   request(`${baseUrl}/ads`)
     .then(response => {
-      console.log("RESPONSE.body:", response.body);
       dispatch(adsFetched(response.body));
     })
     .catch(console.error);
@@ -29,7 +28,7 @@ export const loadAds = () => dispatch => {
 
 export const adFetched = ad => ({
   type: AD_FETCHED,
-  ad
+  payload: ad
 });
 
 export const loadAd = id => dispatch => {

@@ -38,7 +38,6 @@ class AdsListContainer extends React.Component {
   };
 
   render() {
-    console.log("this.props.ads", this.props.ads);
     return (
       <>
         {this.props.ads && <AdsList ads={this.props.ads} />}

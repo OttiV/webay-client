@@ -17,7 +17,7 @@ export default class AdsList extends Component {
 
   render() {
     const { ads } = this.props;
-    console.log("ads", ads);
+
     return (
       <div className="AdsList">
         {!ads && "Loading..."}
