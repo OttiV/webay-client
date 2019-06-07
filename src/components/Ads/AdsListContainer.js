@@ -41,7 +41,7 @@ class AdsListContainer extends React.Component {
     return (
       <>
         {this.props.ads && <AdsList ads={this.props.ads} />}
-        {!this.state.editMode && <button onClick={this.editMode}>Add Ad</button>}
+        {!this.state.editMode && <button className="AdDetailsButtons" onClick={this.editMode}>Add Ad</button>}
         {this.state.editMode && (
           <AdForm
             adsList={this.state.adsList}
