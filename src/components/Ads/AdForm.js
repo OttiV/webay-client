@@ -9,7 +9,7 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="title"
-          value={this.props.title}
+          value={this.props.adDetails ? this.props.values.title : undefined}
           onChange={this.props.onChange}
           className={"AdForm_input"}
         />
@@ -20,7 +20,7 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="description"
-          value={this.props.description}
+          value={this.props.adDetails ? this.props.values.description : undefined}
           onChange={this.props.onChange}
           className={"AdForm_textarea"}
         />
@@ -29,7 +29,7 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="price"
-          value={this.props.price}
+          value={this.props.adDetails ? this.props.values.price : undefined}
           onChange={this.props.onChange}
           className={"AdForm_input"}
         />
@@ -38,7 +38,7 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="email"
-          value={this.props.email}
+          value={this.props.adDetails ? this.props.values.email : undefined}
           onChange={this.props.onChange}
           className={"AdForm_input"}
         />
@@ -47,7 +47,7 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="phone"
-          value={this.props.phone}
+          value={this.props.adDetails ? this.props.values.phone : undefined}
           onChange={this.props.onChange}
           className={"AdForm_input"}
         />
@@ -56,18 +56,20 @@ export default class AdForm extends React.Component {
         <br />
         <input
           name="picture"
-          value={this.props.picture}
+          value={this.props.adDetails ? this.props.values.picture : undefined}
           onChange={this.props.onChange}
           className={"AdForm_input"}
         />
         <br />
-        <button
-          type="submit"
-          className={"AdForm_submitButton"}
-          onSubmit={this.props.onSubmit}
-        >
-          Edit
-        </button>
+        {this.props.adsList ? (
+          <button type="submit" className={"AdForm_submitButton"}>
+            Add
+          </button>
+        ) : (
+          <button type="submit" className={"AdForm_submitButton"}>
+            Edit
+          </button>
+        )}
       </form>
     );
   }

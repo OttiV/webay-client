@@ -1,10 +1,9 @@
 import React from "react";
 import AdForm from "./AdForm";
 import { Link } from "react-router-dom";
-import "./AdDetails.css"
+import "./AdDetails.css";
 
 export default function AdDetails(props) {
-  console.log("PROPSSSS", props.ad);
   return (
     <div className="AdDetailsContainer">
       {props.ad && !props.editMode && (
@@ -15,7 +14,7 @@ export default function AdDetails(props) {
           <p>Price: $ {props.ad.price} </p>
           <p>Email: {props.ad.email} </p>
           <p>Phone: {props.ad.phone} </p>
-          <br/>
+          <br />
           <button className="AdDetailsButtons" onClick={props.onEdit}>
             Edit
           </button>
@@ -24,6 +23,7 @@ export default function AdDetails(props) {
       {props.editMode && (
         <div className="AdForm">
           <AdForm
+            adDetails={props.adDetails}
             values={props.formValues}
             onChange={props.onChange}
             onSubmit={props.onSubmit}
