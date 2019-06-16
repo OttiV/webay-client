@@ -1,6 +1,5 @@
 import React from "react";
 import AdForm from "./AdForm";
-import { Link } from "react-router-dom";
 import "./AdDetails.css";
 
 export default function AdDetails(props) {
@@ -8,10 +7,10 @@ export default function AdDetails(props) {
     <div className="AdDetailsContainer">
       {props.ad && !props.editMode && (
         <div className="AdDetails">
-          <h1>{props.ad.title} </h1>
+          <h2>{props.ad.title} </h2>
           <img className="AdImages" src={props.ad.picture} alt={props.ad.description} />
           <p>Description: {props.ad.description} </p>
-          <p>Price: $ {props.ad.price} </p>
+          <p>Price: € {props.ad.price} </p>
           <p>Email: {props.ad.email} </p>
           <p>Phone: {props.ad.phone} </p>
           <br />
@@ -30,9 +29,7 @@ export default function AdDetails(props) {
           />
         </div>
       )}
-      <Link to="/">
-        <button className="AdDetailsButtons">Home</button>
-      </Link>
+  
     </div>
   );
 }

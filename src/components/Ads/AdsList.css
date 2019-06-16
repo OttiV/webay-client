@@ -1,4 +1,5 @@
 .AdsList {
+  margin-top: 3.5rem;
   text-align: center;
   padding: 15px;
   margin-top: 2rem;
@@ -9,25 +10,18 @@
   min-height: 100%;
 }
 .Ads {
-  border: solid #fff 0.2rem;
-  width: 350px;
-  height: 350px;
+  width: 200px;
+  height: 270px;
   padding: 0.1rem;
   margin: 0.4rem;
   float: left;
-  border-radius: 2rem;
+}
 
-}
-.WeBay{
- font-size: 4rem;
-}
 .images {
-  border-radius: 2rem;
   object-fit: cover;
   width: 200px;
   height: 200px;
-  margin: 2rem;
-  border: double #fff 0.5rem;
+  margin: 0.1rem;
   transition: transform .2s;
 }
 
