@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react";
-// import "./SignupForm.css";
+import "./SignupForm.css";
 
 export default class SignupForm extends PureComponent {
   state = {};
@@ -19,7 +19,7 @@ export default class SignupForm extends PureComponent {
 
   render() {
     return (
-      <form className="signup-form" onSubmit={this.handleSubmit}>
+      <form className="signupForm" onSubmit={this.handleSubmit}>
         <label>
           Name
           <br />
@@ -86,7 +86,7 @@ export default class SignupForm extends PureComponent {
             <p style={{ color: "red" }}>The passwords do not match!</p>
           )}
         <br />
-        <button className="submit" type="submit">
+        <button className="submitButton" type="submit">
           Sign up
         </button>
       </form>

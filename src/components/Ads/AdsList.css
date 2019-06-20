@@ -1,13 +1,11 @@
 .AdsList {
-  margin-top: 3.5rem;
-  text-align: center;
-  padding: 15px;
+  padding: 30px 0;
   margin-top: 2rem;
   font-weight: 300;
   display: flex;
-  background: cover;
-  flex-direction: column;
-  min-height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .Ads {
   width: 200px;
@@ -22,7 +20,7 @@
   width: 200px;
   height: 200px;
   margin: 0.1rem;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .images:hover {
