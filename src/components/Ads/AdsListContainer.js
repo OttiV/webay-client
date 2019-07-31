@@ -41,7 +41,7 @@ class AdsListContainer extends React.Component {
     return (
       <>
         {this.props.ads && !this.state.editMode && <AdsList ads={this.props.ads} />}
-        {!this.state.editMode && <button className="AdDetailsButtons" onClick={this.editMode}>Add Ad</button>}
+        {!this.state.editMode && this.props.currentUser && <button className="AdDetailsButtons" onClick={this.editMode}>Add Ad</button>}
         {this.state.editMode && (
           <AdForm
             adsList={this.state.adsList}
@@ -56,8 +56,8 @@ class AdsListContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  ads: state.ads === null ? null : Object.values(state.ads).sort((a, b) => b.id - a.id)
-  // ads: state.ads
+  ads: state.ads === null ? null : Object.values(state.ads).sort((a, b) => b.id - a.id),
+ currentUser : state.currentUser
 });
 
 export default connect(
